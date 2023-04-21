@@ -1,0 +1,13 @@
+<div class="person-details" *ngIf="person">
+    <div class="back-button">
+        <button (click)="goBack()">Volver Atrás</button>
+      </div>
+    <h2>{{ person.name }}</h2>
+    <img src="https://placehold.it/200x200">
+    <p>Father: {{ person.fatherId }}</p>
+    <p>Mother: {{ person.motherId }}</p>
+    <p>Spouse: {{ person.spouseId }}</p>
+    <p>Children: {{ person.childrenIds.join(', ') }}</p>
+  </div>
+
+  
