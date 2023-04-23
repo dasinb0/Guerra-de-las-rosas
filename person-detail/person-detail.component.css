@@ -1,88 +1,84 @@
 .person-details {
-    font-family: 'EB Garamond', serif;
-    font-size: 20px;
-    color: #F5F5F5;
-    background-color: #856F6F;
-    border: 10px solid #4B3832;
-    padding: 30px;
-    max-width: 800px;
-    margin: 0 auto;
-  }
-  
+  background-color: #F5F5F5;
+  font-family: 'Helvetica Neue', sans-serif;
+  font-size: 18px;
+  color: #333;
+  padding: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.person-details h2 {
+  font-size: 32px;
+  font-weight: bold;
+  color: #333;
+  text-align: center;
+  margin: 50px 0;
+}
+
+.person-details img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 20px auto;
+  border-radius: 5px;
+  box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.2);
+}
+
+.person-details p {
+  margin-bottom: 20px;
+}
+
+.person-details ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.person-details li {
+  padding: 15px;
+  margin-bottom: 10px;
+  background-color: #fff;
+  box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.2);
+}
+
+.person-details li:hover {
+  background-color: #F5F5F5;
+  box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.2);
+}
+
+.back-button {
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.back-button button {
+  background-color: #fff;
+  color: #333;
+  font-family: 'Helvetica Neue', sans-serif;
+  font-size: 18px;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.2);
+  border-radius: 5px;
+}
+
+.back-button button:hover {
+  background-color: #F5F5F5;
+  box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.2);
+}
+
+@media only screen and (max-width: 600px) {
   .person-details h2 {
-    font-size: 36px;
-    font-weight: bold;
-    text-align: center;
-    margin: 50px 0 30px;
-  }
-  
-  .person-details img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin: 20px auto;
-    border: 5px solid #4B3832;
-    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
-  }
-  
-  .person-details p {
-    margin-bottom: 20px;
-  }
-  
-  .person-details ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-  
-  .person-details li {
-    padding: 10px;
-    margin-bottom: 10px;
-    background-color: #4B3832;
-    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
-  }
-  
-  .person-details li:hover {
-    background-color: #856F6F;
-    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+    font-size: 24px;
+    margin: 30px 0;
   }
 
-  .back-button {
-    text-align: left;
-    margin-bottom: 20px;
+  .person-details li {
+    font-size: 16px;
+    padding: 10px;
   }
-  
-  .back-button button {
-    background-color: #4B3832;
-    color: #F5F5F5;
-    font-family: 'EB Garamond', serif;
-    font-size: 18px;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
-  }
-  
-  .back-button button:hover {
-    background-color: #856F6F;
-    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
-  }
-  
-  
-  @media only screen and (max-width: 600px) {
-    .person-details h2 {
-      font-size: 24px;
-      margin: 30px 0;
-    }
-  
-    .person-details li {
-      font-size: 16px;
-      padding: 5px;
-    }
-  
-    .person-details img {
-      margin: 10px auto;
-      border-width: 3px;
-    }
-  }
+}
+
   

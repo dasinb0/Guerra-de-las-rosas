@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { PEOPLE } from '../data';
 import { Router } from '@angular/router';
+import { PeopleService } from '../people.service';
+import { Person } from '../data';
+
 
 @Component({
   selector: 'app-person-list',
@@ -8,16 +10,31 @@ import { Router } from '@angular/router';
   styleUrls: ['./person-list.component.css']
 })
 export class PeopleListComponent implements OnInit {
-  people = PEOPLE;
+  people: Person[] = [];
+  filteredPeople: Person[] = [];
+  selectedPersonId: number | null = null;
 
-  constructor(private router: Router) { }
+  constructor(private router: Router, private peopleService: PeopleService) {}
 
   ngOnInit(): void {
+    this.people = this.peopleService.getPeople();
+    this.filteredPeople = this.people;
   }
 
-  selectPerson(personId: number): void {
-    this.router.navigate(['/person', personId]);
-    console.log(`Persona seleccionada: ${personId}`);
+  selectPerson(id: number): void {
+    this.selectedPersonId = id;
+    this.router.navigateByUrl(`/person/${id}`);
   }
+
+  filterPeople(event: Event): void {
+    const selectedValue = (event.target as HTMLInputElement).value.toLowerCase();
+    if (selectedValue !== "") {
+      this.filteredPeople = this.people.filter(person =>
+        person.name.toLowerCase().includes(selectedValue)
+      );
+    } else {
+      this.filteredPeople = this.people;
+    }
+  }
+  
 }
-
