@@ -1,0 +1,14 @@
+<div class="person-list">
+  <div class="title-wrapper">
+    <h2>Lista de Personas</h2>
+  </div>
+  <input type="text" placeholder="Nombre o apellido" (input)="filterPeople($event)">
+
+  <ul>
+    <li *ngFor="let person of filteredPeople" (click)="selectPerson(person.id)">
+      {{ person.name }}
+    </li>
+  </ul>
+</div>
+
+  

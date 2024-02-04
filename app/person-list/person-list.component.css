@@ -1,0 +1,68 @@
+.person-list {
+  background-color: #F5F5F5;
+  font-family: 'Helvetica Neue', sans-serif;
+  font-size: 18px;
+  color: #333;
+  padding: 20px;
+}
+
+.person-list input[type="text"] {
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.2);
+  font-size: 16px;
+  margin-bottom: 20px;
+  width: 100%;
+  max-width: 500px;
+}
+
+.person-list input[type="text"]:focus {
+  outline: none;
+  box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.2);
+}
+
+.person-list .title-wrapper {
+  text-align: center;
+  margin: 50px 0;
+}
+
+.person-list .title-wrapper h2 {
+  font-size: 32px;
+  font-weight: bold;
+  color: #333;
+}
+
+.person-list ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.person-list li {
+  padding: 15px;
+  margin-bottom: 10px;
+  background-color: #fff;
+  box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.2);
+  cursor: pointer;
+}
+
+.person-list li:hover {
+  background-color: #F5F5F5;
+  box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.2);
+}
+
+
+@media only screen and (max-width: 600px) {
+  .person-list .title-wrapper h2 {
+    font-size: 24px;
+    margin: 30px 0;
+  }
+
+  .person-list li {
+    font-size: 16px;
+    padding: 10px;
+  }
+}
+
+  
