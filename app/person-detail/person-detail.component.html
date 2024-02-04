@@ -4,11 +4,17 @@
   </div>
   <h2>{{ person.name }}</h2>
   <img [src]="'assets/' + (person.image || 'noimagen.jpg')" alt="{{ person.name }}">
-  <p>Father: {{ fatherName }}</p>
-  <p>Mother: {{ motherName }}</p>
-  <p>Spouse: {{ spouseName }}</p>
-  <p>Children: {{ childrenNames.join(', ') }}</p>
+  <p><strong>Padre:</strong> {{ fatherName }}</p>
+  <p><strong>Madre:</strong> {{ motherName }}</p>
+  <p><strong>Cónyuge:</strong> {{ spouseName }}</p>
+  <p><strong>Hijos:</strong> {{ childrenNames && childrenNames.length > 0 ? childrenNames.join(', ') : 'Null' }}</p>
+  <div class="description">
+    <h3><strong>Descripción:</strong></h3>
+    <p>{{ person.description }}</p>
+  </div>
 </div>
+
+
 
 
   <!-- <img src="https://placehold.it/200x200"> -->
